@@ -53,7 +53,7 @@
 
 <details close>
     <summary>
-        <h3>Подключение настройка базы данных ![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white)</h3>
+        <h3>Подключение настройка базы данных Postgres</h3>
     </summary>
 
 В файле `\Api\appsettings.json` добавляем строку подключения `ConnectionStrings -> DBConnection` для базы данных `Postgres`
@@ -78,7 +78,8 @@ PM> Add-Migration Initial_0 -Context ApplicationDbContext
 PM> Update-Database -Context ApplicationDbContext
 ```
 ## Скриншот результата создание таблицы «banks_total» в базе «TestTaskDB»
-![screenshot_0](https://github.com/DmitriyVasilenko/TestTask/img/screenshot_0.png)
+![screenshot_0](https://github.com/DmitriyVasilenko/TestTask/assets/14292709/fb7f1758-42ef-4e45-a080-1e2c46e1566e)
+
 </details>
 
 <details close>
@@ -88,9 +89,9 @@ PM> Update-Database -Context ApplicationDbContext
 
 Поставите `Проект для запуска` -> `Api` и `Web`
 ## Скриншот запущенного проекта Api
-![screenshot_1](https://github.com/DmitriyVasilenko/TestTask/img/screenshot_1.png)
+![screenshot_1](https://github.com/DmitriyVasilenko/TestTask/assets/14292709/7b874bc2-9c7c-451e-a25f-7b3a547288ee)
 ## Скриншот запущенного проекта Web
-![screenshot_2](https://github.com/DmitriyVasilenko/TestTask/img/screenshot_2.png)
+![screenshot_2](https://github.com/DmitriyVasilenko/TestTask/assets/14292709/225ae007-06d7-491a-b923-5761cd757e60)
 ## Скриншот модального окна в запущенном проекте Web
-![screenshot_2](https://github.com/DmitriyVasilenko/TestTask/img/screenshot_2.png)
+![screenshot_3](https://github.com/DmitriyVasilenko/TestTask/assets/14292709/21694da6-42fc-4ae8-bf35-480952f73616)
 </details>
