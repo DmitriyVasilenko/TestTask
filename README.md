@@ -78,7 +78,7 @@ PM> Add-Migration Initial_0 -Context ApplicationDbContext
 PM> Update-Database -Context ApplicationDbContext
 ```
 ## Скриншот результата создание таблицы «banks_total» в базе «TestTaskDB»
-![screenshot_0](https://github.com/DmitriyVasilenko/TestTask/assets/14292709/fb7f1758-42ef-4e45-a080-1e2c46e1566e)
+![screenshot_0](https://github.com/DmitriyVasilenko/TestTask/assets/14292709/e3a033d2-2731-470d-afda-62cb225bde72)
 
 </details>
 
@@ -89,9 +89,10 @@ PM> Update-Database -Context ApplicationDbContext
 
 Поставите `Проект для запуска` -> `Api` и `Web`
 ## Скриншот запущенного проекта Api
-![screenshot_1](https://github.com/DmitriyVasilenko/TestTask/assets/14292709/7b874bc2-9c7c-451e-a25f-7b3a547288ee)
+![screenshot_1](https://github.com/DmitriyVasilenko/TestTask/assets/14292709/27f45508-8755-4417-832c-22683d6ca62f)
 ## Скриншот запущенного проекта Web
-![screenshot_2](https://github.com/DmitriyVasilenko/TestTask/assets/14292709/225ae007-06d7-491a-b923-5761cd757e60)
+![screenshot_2](https://github.com/DmitriyVasilenko/TestTask/assets/14292709/4a61f75b-a684-4edf-8cd8-b66652ee7aae)
 ## Скриншот модального окна в запущенном проекте Web
-![screenshot_3](https://github.com/DmitriyVasilenko/TestTask/assets/14292709/21694da6-42fc-4ae8-bf35-480952f73616)
+![screenshot_3](https://github.com/DmitriyVasilenko/TestTask/assets/14292709/32df4a69-4860-46c0-95fc-bccd14c9c320)
+
 </details>
