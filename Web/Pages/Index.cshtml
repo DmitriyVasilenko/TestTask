@@ -1,0 +1,86 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="card text-center">
+    <div class="card-body">
+        <div class="pt-4 pb-2">
+            <h5 class="card-title text-center pb-0 fs-4">Тестовое задание</h5>
+        </div>
+        <button type="button" class="btn btn-primary" onclick="ShowCreateBanksTotal()">
+            <i class="bi bi-file-earmark-plus"></i>Создать
+        </button>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th style="display: none;" scope="col">id</th>
+                    <th scope="col">№</th>
+                    <th scope="col">Банк</th>
+                    <th class="text-center" scope="col">Сумма</th>
+                    <th class="text-center" scope="col">Добавить</th>
+                    <th class="text-center" scope="col">Изменить</th>
+                    <th class="text-center" scope="col">Удалить</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="modal fade" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false" id="form-modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 id="titleValue" class="modal-title"></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form class="row g-3 needs-validation" validate method="post">
+                    <input type="hidden" class="form-control" id="id" value="">
+                    <input type="hidden" class="form-control" id="type" value="">
+                    <div class="mb-2">
+                        <label for="total" class="col-form-label">Валюта</label>
+                        <input type="number" name="total" class="form-control" id="total" required value="0" step="any">
+                    </div>
+                    <div class="mb-2">
+                        <label for="bank" class="col-form-label">Банки</label>
+                        <select class="form-select form-select-modal" id="bank" name="bank" required>
+                        </select>
+                    </div>
+                    <div class="modal-footer">
+                        <input id="submitValue" type="submit" class="btn btn-primary" value="Отправить" onclick="SaveBanksTotal()" disabled>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+@section Scripts {
+    <script type="text/javascript">
+        /**
+        * Функция срабатования при изменении полей  total и bank для активанции кнопки submit
+        */
+        $(':input').on('change keyup', function () {
+            var total = $('#total').val();
+            var bank = $('#bank').val();
+            var type = $('#type').val();
+
+            if (total != 0 && bank != '-' && type != 2 ) {
+                $('input[type="submit"]').removeAttr('disabled');
+            } else if (bank != '-' && type == 2) {
+                $('input[type="submit"]').removeAttr('disabled');
+            } else {
+                $('input[type="submit"]').attr('disabled', 'disabled');
+            }
+        });
+        /**
+        * Функция стартового запуска создания таблицы банков
+        */
+        $(document).ready(function () {
+            GetBanksTotal();
+        });
+    </script>
+}
